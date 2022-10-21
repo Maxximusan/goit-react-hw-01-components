@@ -1,6 +1,8 @@
 import user from 'json-files/user.json'
-
+import data from 'json-files/data.json'
+// import { user, data, friends, transactions} from 'json-files'
 import { Profile } from 'components/01-Profile/Profile'
+import { Statistics } from 'components/02-Statistics/Statistics';
 
 export const App = () => {
   return (
@@ -21,7 +23,14 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-      
+      <Statistics title="Upload stats" stats={data} />
+    
     </div>
   );
 };
+
+// сделать импорты из 1й папки !!!
+// инсталю emotion
+
+// import data from '/path/to/data.json';
+
